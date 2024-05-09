@@ -1,28 +1,10 @@
 import { useState } from 'react'
 import './App.css'
 import { useEffect } from 'react';
+import { FaDiceFive } from "react-icons/fa";
+
 
 function App() {
-
-//   const [advice, setAdvice] = useState({});
-
-//     useEffect(() => {
-//         fetchAdvice();
-//     }, []);
-
-//     const fetchAdvice = async () => {
-//         try {
-//             const response = await fetch('https://api.adviceslip.com/advice');
-//             const data = await response.json();
-//             setAdvice(data.slip);
-//         } catch (error) {
-//             console.error('Error fetching advice:', error);
-//         }
-//     };
-
-//     const handleGenerateAdvice = () => {
-//         fetchAdvice();
-//     };
 
 const [advice, setAdvice] = useState({});
 useEffect(()=>{
@@ -43,7 +25,7 @@ const handleGenerateAdvice = () =>{
             <span className='advice-id'>Advice # {advice.id}</span>
             <p className='text-2xl'>{advice.advice}</p>
            <div className="dice">
-           <button onClick={handleGenerateAdvice}><img src="../src/assets/images/icon-dice.svg" alt="generate-icon" /></button>
+           <button onClick={handleGenerateAdvice}><FaDiceFive className='dice-icon'></FaDiceFive></button>
            </div>
             </div>
         </div>
